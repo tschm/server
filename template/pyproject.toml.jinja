@@ -1,0 +1,49 @@
+[project]
+name = '{{project_name }}'
+version = "0.0.0"
+description = "{{ description }}"
+# Please add authors and correct the email...
+authors = [{name='{{ username }}', email= '{{ username }}@mailinator.com'}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy-flight>=0.0.9"
+]
+
+[project.urls]
+repository = "{{ repository }}"
+
+[dependency-groups]
+dev = [
+    "pytest-cov>=6.0.0",
+    "pytest>=8.3.3",
+    "pre-commit>=4.0.1",
+    "pytest-mock"
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+exclude = [
+    "*__init__.py"
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/{{project_name}}"]
+
+[tool.hatch.build]
+include = [
+    "LICENSE",    # Ensure the LICENSE file is included in your package
+    "README.md",
+    "src/{{ project_name }}"
+]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
