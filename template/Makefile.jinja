@@ -39,3 +39,7 @@ marimo: install ## Install Marimo
 test: install  ## Run pytests
 	@uv pip install pytest
 	@uv run pytest src/tests
+
+.PHONY: docker
+docker:    ## build the docker image
+	@docker build -t {{ username }}/{{ project_name }}:latest -f docker/Dockerfile .
