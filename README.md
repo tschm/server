@@ -36,4 +36,4 @@ make fmt     # Install pre-commit hooks and run them on all files
 
 Thomas Schmelzer - [@tschm](https://github.com/tschm)
 
-Project Link: <https://github.com/tschm/package>
+Project Link: <https://github.com/tschm/server>
