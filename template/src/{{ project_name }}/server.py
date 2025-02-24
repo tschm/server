@@ -8,5 +8,14 @@ class TestServer(Server):
         return {key : 2*value for key, value in matrices.items()}
 
 
-if __name__ == "__main__":  # pragma: no cover
+# needed for uv run
+def main():
     TestServer.start()
+
+if __name__ == "__main__":  # pragma: no cover
+    main()
+
+    from tschm.flight import Client
+    with Client(location="grpc://127.0.0.1:5555") as client:
+        output = client.compute(command="compute", data={"input": np.array([1,2,3])})
+        print(output)

@@ -47,3 +47,7 @@ include = [
 
 [tool.bandit]
 exclude_dirs = ["tests"]
+exclude = ["B104"]
+
+[project.scripts]
+server = "{{ project_name }}.server:main"
