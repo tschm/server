@@ -18,7 +18,7 @@ COPY --chown=app_user:app_user uv.lock pyproject.toml README.md /app/
 RUN uv sync --frozen --no-dev && rm -rf /uv /bin/uv && rm uv.lock pyproject.toml
 
 # Copy the application code
-COPY --chown=app_user:app_user src/cvx/ball/ ./cvx/ball/
+COPY --chown=app_user:app_user src/{{ project_name }} ./{{ project_name }}
 
 # Switch to non-root user
 USER app_user
@@ -31,4 +31,4 @@ ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 
 # Run the server
-CMD [".venv/bin/python", "cvx/ball/server.py"]
+CMD [".venv/bin/python", "{{ project_name }}/server.py"]
