@@ -1,15 +1,22 @@
-# Template for cradle
+# Server for cradle
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/tschm/paper/actions/workflows/act.yml/badge.svg)](https://github.com/tschm/paper/actions/workflows/act.yml)
 [![Created for Cradle](https://img.shields.io/badge/Created%20for-Cradle-blue?style=flat-square)](https://github.com/cvxgrp/cradle)
 
-The template supports the fast creation of repositories of LaTeX documents.
+The template supports the fast creation of servers for numpy-driven applications
+
 Out of the box you get
 
-* curated pre-commit-hooks (e.g. for spelling)
-* github ci/cd workflows
-* Makefile
+* Uses uv for dependency management and hatch for build management
+* Offers a list of curated pre-commit hooks
+* GitHub Actions for continuous integration
+* Automated testing with pytest
+* Code formatting with ruff
+* Interactive notebooks with marimo
+* Documentation generation with pdoc
+* Support of a DevContainer
+* Dockerfile to build the image for the server
 
 ## Development Commands
 
