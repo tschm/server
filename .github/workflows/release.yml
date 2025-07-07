@@ -18,8 +18,6 @@ jobs:
   # Job to create and push a tag based on user input
   tagging:
     runs-on: ubuntu-latest
-    outputs:
-      new_tag: ${{ steps.set_tag.outputs.tag }}  # Output the tag to be used by other jobs
 
     steps:
       - name: Checkout [${{ github.repository }}]
