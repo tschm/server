@@ -16,7 +16,6 @@ Out of the box you get
 * 🧹 Code formatting with ruff
 * 📊 Interactive notebooks with marimo
 * 📚 Documentation generation with pdoc
-* 🐳 Support of a DevContainer
 * 🐋 Dockerfile to build the image for the server
 
 ## 🛠️ Development Commands
