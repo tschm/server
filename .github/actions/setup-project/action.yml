@@ -44,7 +44,8 @@ runs:
         
         # Delete all folders that still contain {{ ... }}
         find . -depth -type d -name "*{{*}}*" -exec rm -rf {} +
-        
+
+        # Check the project after rendering
         ls -R
         
     - name: Check for pyproject.toml
@@ -69,3 +70,4 @@ runs:
         else
           echo "No pyproject.toml found, skipping package installation"
         fi
+
