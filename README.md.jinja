@@ -44,6 +44,10 @@ with Client(location="grpc://127.0.0.1:5555") as client:
     output = client.compute(command="compute", data={"input": np.array([1,2,3])})
 
 print(output["input"])
-[2 4 6]
-
 ```
+
+```result
+[2 4 6]
+```
+
+
